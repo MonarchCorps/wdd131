@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Madagascar | WDD 131</title>
+
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/query.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <script src="js/index.js" defer></script>
 </head>
-
 <body>
 
-    <div class="container">
-        <header class="header">
-            <div class="header-container">
-                <h1>Madagascar</h1>
-            </div>
-        </header>
+<div class="container">
 
-        <main>
-            <img srcset="images/madagascar-small.webp 600w, 
-            images/madagascar-large.webp 1200w" src="images/madagascar-small.webp"
-                alt="Beautiful landscape of Madagascar" loading="lazy">
+    <header class="header">
+        <h1>Madagascar</h1>
+    </header>
 
-            <div class="content-container">
-                <section>
-                    <div>Data</div>
-                    <ul>
-                        <li><strong>Area</strong>: 587,041 sq km</li>
-                        <li><strong>Population</strong>: 27,691,018</li>
-                        <li><strong>Capital</strong>: Antananarivo</li>
-                        <li><strong>Languages</strong>: Malagasy, French</li>
-                        <li><strong>Currency</strong>: Malagasy Ariary</li>
-                        <li><strong>Time Zone</strong>: UTC+3</li>
-                        <li><strong>Calling Code</strong>: +261</li>
-                        <li><strong>Internet TLD</strong>: .mg</li>
-                    </ul>
-                </section>
-                <section class="end">
-                    <div>
-                        Weather
-                        <img src="images/weather.svg" alt="Weather Icon">
-                    </div>
-                    <ul>
-                        <li><strong>Temperature</strong>: <span id="temperature">10</span>°C</li>
-                        <li><strong>Conditions</strong>: Partly Cloudy</li>
-                        <li><strong>Wind</strong>: <span id="windSpeed">5</span> km/h</li>
-                        <li><strong>Wind Chill</strong>: <span id="windChill"></span></li>
-                    </ul>
-                </section>
-            </div>
-        </main>
+    <main>
+        <img 
+            src="images/madagascar-small.webp"
+            srcset="
+                images/madagascar-small.webp 600w,
+                images/madagascar-large.webp 1200w
+            "
+            sizes="(max-width: 600px) 100vw, 1200px"
+            alt="Beautiful landscape of Madagascar"
+            loading="lazy"
+            class="hero"
+        >
 
-        <footer>
-            <p>&copy;<span id="currentYear"></span> 🌺 Rubia Magdelena Francesco 🌺 Madagascar</p>
-            <p>Last Modification: <span id="lastModified"></span></p>
-        </footer>
-    </div>
+        <div class="content-container">
+
+            <section class="card">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 587,041 sq km</li>
+                    <li><strong>Population:</strong> 27,691,018</li>
+                    <li><strong>Capital:</strong> Antananarivo</li>
+                    <li><strong>Languages:</strong> Malagasy, French</li>
+                    <li><strong>Currency:</strong> Malagasy Ariary</li>
+                    <li><strong>Time Zone:</strong> UTC+3</li>
+                    <li><strong>Calling Code:</strong> +261</li>
+                    <li><strong>Internet TLD:</strong> .mg</li>
+                </ul>
+            </section>
+
+            <section class="card weather">
+                <h2>Weather</h2>
+
+                <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
+
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temperature">10</span> °C</li>
+                    <li><strong>Conditions:</strong> Partly Cloudy</li>
+                    <li><strong>Wind:</strong> <span id="windSpeed">5</span> km/h</li>
+                    <li><strong>Wind Chill:</strong> <span id="windChill"></span></li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> 🌺 Rubia Magdelena Francesco 🌺 Madagascar</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</div>
 
 </body>
-
 </html>

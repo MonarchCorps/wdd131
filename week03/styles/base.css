@@ -1,117 +1,96 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 :root {
-    --primary-white: #fff;
-    --header-bg-color: #c12d39;
+    --primary-red: #c12d39;
     --primary-green: #016401;
+    --white: #ffffff;
+    --overlay: rgba(255, 255, 255, 0.85);
 }
 
 body {
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-}
-
-.container {
-    min-height: 100vh;
-    max-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: auto;
     background-color: var(--primary-green);
 }
 
-header.header {
-    background-color: var(--header-bg-color);
-    padding: 20px;
+.container {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
-header.header h1 {
-    color: var(--primary-white);
+.header {
+    background-color: var(--primary-red);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.header h1 {
+    color: var(--white);
     font-size: 2.5rem;
 }
 
 main {
-    flex: 1;
-    margin-top: 10px;
     position: relative;
+    flex: 1;
 }
 
-main img {
-    width: 1200px;
-    height: 86vh;
+.hero {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
 }
 
 .content-container {
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    inset: 0;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 1rem;
 }
 
-.content-container section {
-    background-color: rgba(255, 255, 255, 0.8);
+.card {
+    background-color: var(--overlay);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem;
+    min-width: 280px;
     height: fit-content;
-    min-width: 300px;
-    padding: 10px 0;
 }
 
-.content-container section.end {
-    align-self: end;
-}
-
-.content-container div {
+.card h2 {
     background-color: var(--primary-green);
-    margin-bottom: 20px;
-    max-width: 80%;
-    padding: 10px;
-    color: var(--primary-white);
+    color: var(--white);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 60px;
 }
 
-.content-container div img {
-    width: 60px;
-    height: 60px;
-}
-
-
-.content-container section ul {
-    list-style-type: none;
-    align-items: center;
+.card ul {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.6rem;
 }
 
+.weather {
+    align-self: flex-end;
+}
+
+.weather-icon {
+    width: 60px;
+    display: none;
+}
 
 footer {
-    background-color: var(--header-bg-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    padding-bottom: 40px;
-    gap: 5px;
-}
-
-footer p {
-    color: var(--primary-white);
+    background-color: var(--primary-red);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
     font-weight: 300;
-    font-size: 1rem;
 }
