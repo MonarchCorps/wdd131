@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumb Community - Site Plan</title>
+    <meta name="description" content="Site plan for the GreenThumb Community website project.">
+    <meta name="author" content="Your Name">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+    <header>
+        <h1>Site Plan: GreenThumb Community</h1>
+        <p>A place for local gardeners to grow together.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>GreenThumb Community</strong></p>
+            <p>I chose this name because it clearly communicates the website's focus on gardening and community
+                interaction. It feels welcoming and encourages users who want to develop their "green thumb".</p>
+            <p><em>Optional Domain: greenthumbcommunity.org</em></p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The GreenThumb Community website serves as a hub for local gardeners to connect, share resources, and
+                learn. The site will provide:</p>
+            <ul>
+                <li>Planting guides specific to our local climate zone.</li>
+                <li>A community forum for asking questions and sharing tips.</li>
+                <li>Information on upcoming seed swap events and community garden workdays.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <p>Questions our target audience might ask:</p>
+            <ol>
+                <li>"I am new to gardening in this area. What vegetables grow best here in the spring?"</li>
+                <li>"I have extra tomato seedlings. How can I find someone to trade with?"</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Color Schema</h2>
+            <p>The color palette is inspired by nature, using deep greens and earthy browns to evoke a sense of growth
+                and soil.</p>
+            <div class="color-palette">
+                <div class="color-swatch primary-bg">#2E7D32<br>Primary</div>
+                <div class="color-swatch secondary-bg">#4E342E<br>Secondary</div>
+                <div class="color-swatch accent-bg">#81C784<br>Accent</div>
+                <div class="color-swatch background-bg">#F1F8E9<br>Background</div>
+            </div>
+            <p><strong>Usage:</strong></p>
+            <ul>
+                <li><strong>Primary (Forest Green):</strong> Header, Footer, Main Buttons.</li>
+                <li><strong>Secondary (Dark Brown):</strong> Headings, Important text highlights.</li>
+                <li><strong>Accent (Light Green):</strong> Borders, Secondary buttons, Hover states.</li>
+                <li><strong>Background (Tinted White):</strong> Main page background to reduce eye strain.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p>We have selected a serif font for headings to give a classic, organic feel, paired with a clean
+                sans-serif for readability in the body text.</p>
+
+            <div class="font-example">
+                <p class="font-example-heading">Heading Font: Lora</p>
+                <p class="font-example-body">Body Font: Roboto</p>
+            </div>
+
+            <p><strong>Usage:</strong></p>
+            <ul>
+                <li><strong>Lora:</strong> Used for all H1, H2, and H3 headings.</li>
+                <li><strong>Roboto:</strong> Used for all paragraphs, lists, and navigation text.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Wireframes</h2>
+            <p>Below are the wireframe sketches for the Home Page in both Mobile and Desktop views.</p>
+
+            <div class="wireframe-display">
+                <div class="wireframe-box">
+                    <h3>Mobile View</h3>
+                    <img src="images/wireframe-mobile.png" alt="Mobile Wireframe Sketch">
+                    <p><em>Single column layout with hamburger menu, hero image, and vertical list of features.</em></p>
+                </div>
+                <div class="wireframe-box">
+                    <h3>Desktop View</h3>
+                    <img src="images/wireframe-desktop.png" alt="Desktop Wireframe Sketch">
+                    <p>
+                        <em>Three column layout with horizontal navigation, large hero banner, and side-by-side feature
+                            cards.</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> GreenThumb Community Site Plan</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Last Modification: " + document.lastModified;
+    </script>
+</body>
+
+</html>
