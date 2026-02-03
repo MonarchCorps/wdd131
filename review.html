@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Product review confirmation page" />
+        <meta name="author" content="David Okocha Leon" />
+        <title>Review Submitted</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="styles/form.css" />
+        <script src="scripts/review.js" defer></script>
+        <script src="scripts/getdates.js" defer></script>
+    </head>
+    <body>
+        <header class="page-header">
+            <h1>Review Submitted</h1>
+        </header>
+
+        <main>
+            <section class="review-form">
+                <section class="panel">
+                    <h2 class="panel-title">Thanks</h2>
+                    <p class="lead">Your review has been recorded.</p>
+                </section>
+
+                <section class="panel">
+                    <h2 class="panel-title">Reviews Completed</h2>
+                    <p class="lead">
+                        Total reviews submitted from this browser:
+                        <strong><span id="reviewCount">0</span></strong>
+                    </p>
+                </section>
+
+                <section class="panel">
+                    <h2 class="panel-title">Submission Summary</h2>
+                    <dl id="summary" class="summary"></dl>
+                </section>
+
+                <div class="actions">
+                    <a class="button" href="form.html">Submit Another Review</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="currentyear"></span> 🌸 David Okocha Leon 🌸 Lagos, Nigeria</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
