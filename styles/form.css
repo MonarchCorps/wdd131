@@ -7,6 +7,10 @@
 	--border-color: #999;
 	--font-family: "Source Sans 3", Roboto, Helvetica, Arial, sans-serif;
 	--required-color: #990000;
+	--button-bg: #e0e0e0;
+	--button-hover: #d0d0d0;
+	--button-text: #000000;
+	--footer-text-secondary: #e0e0e0;
 }
 
 body {
@@ -22,7 +26,7 @@ body {
 
 .page-header {
 	background-color: var(--primary-color);
-	color: white;
+	color: #ffffff;
 	text-align: center;
 	padding: 1rem;
 }
@@ -138,26 +142,29 @@ textarea {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background-color: white;
-	border: 1px solid #999;
+	background-color: #ffffff;
+	border: 1px solid var(--border-color);
 	cursor: pointer;
 	margin: 0;
 }
 
 .rating-item input[type="radio"]:checked {
 	background-color: var(--primary-color);
-	/* Or keep white with a dot */
 	border-width: 5px;
-	/* Creates a dot effect if border is used */
-	border-color: white;
-	background-color: var(--primary-color);
+	border-color: #ffffff;
 }
 
 /* Checkboxes */
 .checklist {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
 	gap: 0.5rem;
+}
+
+@media (min-width: 600px) {
+	.checklist {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 .check {
@@ -169,8 +176,8 @@ textarea {
 .check input[type="checkbox"] {
 	width: 20px;
 	height: 20px;
-	background-color: white;
-	border: 1px solid #999;
+	background-color: #ffffff;
+	border: 1px solid var(--border-color);
 	cursor: pointer;
 }
 
@@ -187,23 +194,23 @@ textarea {
 input[type="submit"] {
 	width: 100%;
 	padding: 1rem;
-	background-color: #e0e0e0;
-	border: 1px solid #999;
+	background-color: var(--button-bg);
+	border: 1px solid var(--border-color);
 	border-radius: 4px;
 	font-weight: bold;
 	font-size: 1.1rem;
 	cursor: pointer;
-	color: black;
+	color: var(--button-text);
 }
 
 input[type="submit"]:hover {
-	background-color: #d0d0d0;
+	background-color: var(--button-hover);
 }
 
 /* Footer */
 footer {
 	background-color: var(--primary-color);
-	color: white;
+	color: #ffffff;
 	text-align: center;
 	padding: 1rem;
 	font-size: 0.9rem;
@@ -214,7 +221,7 @@ footer p {
 }
 
 #lastModified {
-	color: #e0e0e0;
+	color: var(--footer-text-secondary);
 }
 
 /* Review Page Specifics */
@@ -237,18 +244,18 @@ footer p {
 	display: block;
 	width: 100%;
 	padding: 1rem;
-	background-color: #e0e0e0;
-	border: 1px solid #999;
+	background-color: var(--button-bg);
+	border: 1px solid var(--border-color);
 	border-radius: 4px;
 	font-weight: bold;
 	font-size: 1.1rem;
 	cursor: pointer;
-	color: black;
+	color: var(--button-text);
 	text-align: center;
 	text-decoration: none;
 	box-sizing: border-box;
 }
 
 .button:hover {
-	background-color: #d0d0d0;
+	background-color: var(--button-hover);
 }
