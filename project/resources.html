@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GreenThumb Community - Resources</title>
+	<meta name="description"
+		content="Gardening resources, plant guides, and seasonal tips from the GreenThumb Community.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="styles/project.css">
+	<link rel="stylesheet" href="styles/query.css">
+	<script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<h1>GreenThumb</h1>
+		<button id="hamburger" aria-label="Toggle navigation">☰</button>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="resources.html" class="active">Resources</a>
+			<a href="join.html">Join</a>
+			<a href="siteplan.html">Site Plan</a>
+		</nav>
+	</header>
+
+	<main>
+		<h2>Planting Guide</h2>
+		<p>Here's what grows well around here. Use the filter to narrow things down by season.</p>
+
+		<div class="filter-bar">
+			<label for="season-filter">Season</label>
+			<select id="season-filter">
+				<option value="all">All seasons</option>
+				<option value="Spring">Spring</option>
+				<option value="Summer">Summer</option>
+				<option value="Fall">Fall</option>
+			</select>
+		</div>
+
+		<div class="resources-grid">
+			<p>Loading resources...</p>
+		</div>
+	</main>
+
+	<footer>
+		<p>&copy; <span id="currentyear"></span> GreenThumb Community</p>
+		<p id="lastModified"></p>
+	</footer>
+</body>
+
+</html>

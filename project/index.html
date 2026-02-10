@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GreenThumb Community - Home</title>
+	<meta name="description"
+		content="Welcome to the GreenThumb Community, a place for local gardeners to grow together.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="styles/project.css">
+	<link rel="stylesheet" href="styles/query.css">
+	<script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<h1>GreenThumb</h1>
+		<button id="hamburger" aria-label="Toggle navigation">☰</button>
+		<nav>
+			<a href="index.html" class="active">Home</a>
+			<a href="resources.html">Resources</a>
+			<a href="join.html">Join</a>
+			<a href="siteplan.html">Site Plan</a>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero">
+			<picture>
+				<source media="(max-width: 600px)"
+					srcset="https://images.pexels.com/photos/169523/pexels-photo-169523.jpeg?auto=compress&cs=tinysrgb&w=600">
+				<img src="https://images.pexels.com/photos/169523/pexels-photo-169523.jpeg?auto=compress&cs=tinysrgb&w=1200"
+					alt="Rows of vegetables growing in a sunlit garden" width="1200" height="420" loading="eager">
+			</picture>
+			<div class="hero-text">
+				<h2>Grow With Us</h2>
+				<p>A community of local gardeners sharing seeds, tips, and the occasional zucchini surplus.</p>
+			</div>
+		</section>
+
+		<section>
+			<div id="welcome-message"></div>
+
+			<h2>What we're about</h2>
+			<p>Whether you've got a sprawling backyard plot or a single basil plant on your windowsill, you're welcome
+				here. GreenThumb is a neighborhood-run group focused on making gardening more accessible — and a lot
+				more fun.</p>
+
+			<h3>What you get as a member</h3>
+			<ul>
+				<li><strong>Local planting calendars</strong> — tailored to our specific climate zone, not some generic
+					national chart.</li>
+				<li><strong>Seed swaps</strong> — trade your extra tomato starts for someone's heirloom peppers. It's
+					like bartering, but better.</li>
+				<li><strong>Pest &amp; disease help</strong> — post a photo of that weird leaf spot and get real answers
+					from people who've dealt with it.</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; <span id="currentyear"></span> GreenThumb Community</p>
+		<p id="lastModified"></p>
+	</footer>
+</body>
+
+</html>

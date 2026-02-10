@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --green-dark: #1a3a2a;
+    --green-mid: #2d5a3f;
+    --green-soft: #5a8a6a;
+    --brown: #6b4c3b;
+    --cream: #faf6f0;
+    --cream-dark: #ede7dd;
+    --sand: #d4c5a9;
+    --text: #2c2c2c;
+    --text-light: #6b6b6b;
+    --white: #fff;
+
+    --font-display: 'DM Serif Display', 'Lora', Georgia, serif;
+    --font-body: 'Inter', 'Roboto', -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--green-dark);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.4em;
+}
+
+p {
+    margin-bottom: 1em;
+    max-width: 65ch;
+}
+
+a {
+    color: var(--green-mid);
+    text-decoration-color: var(--sand);
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--brown);
+}
+
+strong {
+    font-weight: 600;
+    color: var(--green-dark);
+}
+
+ul {
+    padding-left: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+li {
+    margin-bottom: 0.6em;
+}
+
+li::marker {
+    color: var(--green-soft);
+}
+
+header {
+    background: var(--green-dark);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+header h1 {
+    color: var(--cream);
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+nav a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.75rem;
+    border-radius: 3px;
+    transition: color 0.2s, background 0.2s;
+}
+
+nav a:hover {
+    color: var(--white);
+    background: rgba(255,255,255,0.08);
+}
+
+nav a.active {
+    color: var(--white);
+    background: rgba(255,255,255,0.12);
+}
+
+#hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--cream);
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+}
+
+.hero {
+    position: relative;
+    margin: -3rem -1.5rem 3rem;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85) saturate(1.1);
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2rem;
+    max-width: 420px;
+    background: rgba(26, 58, 42, 0.88);
+    color: var(--cream);
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    backdrop-filter: blur(4px);
+}
+
+.hero-text h2 {
+    color: var(--cream);
+    font-size: 2.25rem;
+    margin-bottom: 0.3em;
+}
+
+.hero-text p {
+    color: rgba(250, 246, 240, 0.85);
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+#welcome-message {
+    background: var(--cream-dark);
+    border-left: 3px solid var(--green-soft);
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 3px 3px 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+#welcome-message p {
+    margin: 0;
+}
+
+section h3 {
+    margin-top: 2rem;
+    color: var(--brown);
+    font-size: 1.2rem;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 1rem 1.25rem 1.25rem;
+}
+
+.card-content h3 {
+    color: var(--green-dark);
+    margin-bottom: 0.35em;
+    font-size: 1.15rem;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 0.5em;
+}
+
+.card-content p:last-child {
+    margin-bottom: 0;
+}
+
+.filter-bar {
+    margin-bottom: 0.5rem;
+}
+
+.filter-bar label,
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-light);
+    margin-bottom: 0.4rem;
+}
+
+.filter-bar select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b6b' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    border: 1px solid var(--cream-dark);
+    padding: 0.55rem 2.5rem 0.55rem 0.75rem;
+    border-radius: 3px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.filter-bar select:focus {
+    outline: none;
+    border-color: var(--green-soft);
+}
+
+form {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    padding: 2rem 2rem 2.5rem;
+    border-radius: 4px;
+    max-width: 520px;
+    margin: 1.5rem auto 0;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-light);
+    margin-bottom: 0.4rem;
+}
+
+.form-group label span {
+    color: #c0392b;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--cream-dark);
+    border-radius: 3px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--cream);
+    transition: border-color 0.2s, background 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--green-soft);
+    background: var(--white);
+}
+
+input::placeholder {
+    color: #b5b0a8;
+}
+
+.form-group label:has(input[type="checkbox"]) {
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--text);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.form-group label:has(input[type="checkbox"]) input {
+    width: auto;
+    margin-top: 0.2rem;
+    accent-color: var(--green-mid);
+}
+
+.form-group label:has(input[type="checkbox"]) a {
+    color: var(--green-mid);
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    background: var(--green-dark);
+    color: var(--cream);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+    background: var(--green-mid);
+}
+
+footer {
+    background: var(--green-dark);
+    color: rgba(250,246,240,0.6);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.8rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0.15em auto;
+    max-width: none;
+}
+
+footer a {
+    color: var(--sand);
+}
