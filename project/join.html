@@ -17,30 +17,31 @@
 </head>
 
 <body>
+	<a class="skip-link" href="#main">Skip to content</a>
 	<header>
 		<h1>GreenThumb</h1>
-		<button id="hamburger" aria-label="Toggle navigation">☰</button>
-		<nav>
+		<button id="hamburger" aria-label="Menu" aria-controls="primary-nav" aria-expanded="false">☰</button>
+		<nav id="primary-nav">
 			<a href="index.html">Home</a>
 			<a href="resources.html">Resources</a>
 			<a href="join.html" class="active">Join</a>
-			<a href="siteplan.html">Site Plan</a>
+			<a href="references.html">References</a>
 		</nav>
 	</header>
 
-	<main>
+	<main id="main">
 		<h2>Become a member</h2>
 		<p>Fill this out and we'll add you to the list. You'll get weekly planting reminders and first dibs on seed swap
 			events.</p>
 
 		<form id="join-form" method="get" action="thankyou.html">
 			<div class="form-group">
-				<label for="name">Full Name <span>*</span></label>
+				<label for="name">Full Name <span class="required">*</span></label>
 				<input type="text" id="name" name="name" required placeholder="Jane Doe">
 			</div>
 
 			<div class="form-group">
-				<label for="email">Email <span>*</span></label>
+				<label for="email">Email <span class="required">*</span></label>
 				<input type="email" id="email" name="email" required placeholder="jane@example.com">
 			</div>
 
@@ -60,19 +61,29 @@
 				<input type="number" id="experience" name="experience" min="0" max="100" placeholder="0">
 			</div>
 
-			<div class="form-group">
-				<label>
+			<div class="form-group form-check">
+				<label class="check-label">
 					<input type="checkbox" name="terms" required>
-					I've read the <a href="#">community guidelines</a> and I'm on board.
+					I've read the <a href="#guidelines">community guidelines</a> and I'm on board.
 				</label>
 			</div>
 
 			<button type="submit">Sign me up</button>
 		</form>
+
+		<section id="guidelines">
+			<h3>Community guidelines</h3>
+			<ul>
+				<li>Be kind and assume good intent.</li>
+				<li>Share local advice when you can (zone, sunlight, watering schedule).</li>
+				<li>No spam, no sales pitches, and no unsafe pesticide recommendations.</li>
+			</ul>
+		</section>
 	</main>
 
 	<footer>
 		<p>&copy; <span id="currentyear"></span> GreenThumb Community</p>
+		<p><a href="references.html">References</a></p>
 		<p id="lastModified"></p>
 	</footer>
 </body>

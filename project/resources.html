@@ -18,18 +18,19 @@
 </head>
 
 <body>
+	<a class="skip-link" href="#main">Skip to content</a>
 	<header>
 		<h1>GreenThumb</h1>
-		<button id="hamburger" aria-label="Toggle navigation">☰</button>
-		<nav>
+		<button id="hamburger" aria-label="Menu" aria-controls="primary-nav" aria-expanded="false">☰</button>
+		<nav id="primary-nav">
 			<a href="index.html">Home</a>
 			<a href="resources.html" class="active">Resources</a>
 			<a href="join.html">Join</a>
-			<a href="siteplan.html">Site Plan</a>
+			<a href="references.html">References</a>
 		</nav>
 	</header>
 
-	<main>
+	<main id="main">
 		<h2>Planting Guide</h2>
 		<p>Here's what grows well around here. Use the filter to narrow things down by season.</p>
 
@@ -44,12 +45,24 @@
 		</div>
 
 		<div class="resources-grid">
-			<p>Loading resources...</p>
+			<noscript>
+				<p>Enable JavaScript to view the full card view and seasonal filter.</p>
+			</noscript>
 		</div>
+
+		<ul class="resources-fallback">
+			<li><strong>Heirloom Tomato</strong> — Summer vegetable that needs full sun.</li>
+			<li><strong>Sweet Basil</strong> — Summer herb that grows well in pots.</li>
+			<li><strong>Crunchy Carrots</strong> — Spring/Fall vegetable for loose soil.</li>
+			<li><strong>Giant Sunflower</strong> — Summer flower that attracts pollinators.</li>
+			<li><strong>Crisp Lettuce</strong> — Spring vegetable that grows quickly in cool weather.</li>
+			<li><strong>English Lavender</strong> — Summer herb that prefers sun and good drainage.</li>
+		</ul>
 	</main>
 
 	<footer>
 		<p>&copy; <span id="currentyear"></span> GreenThumb Community</p>
+		<p><a href="references.html">References</a></p>
 		<p id="lastModified"></p>
 	</footer>
 </body>

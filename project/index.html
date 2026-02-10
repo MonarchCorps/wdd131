@@ -18,18 +18,19 @@
 </head>
 
 <body>
+	<a class="skip-link" href="#main">Skip to content</a>
 	<header>
 		<h1>GreenThumb</h1>
-		<button id="hamburger" aria-label="Toggle navigation">☰</button>
-		<nav>
+		<button id="hamburger" aria-label="Menu" aria-controls="primary-nav" aria-expanded="false">☰</button>
+		<nav id="primary-nav">
 			<a href="index.html" class="active">Home</a>
 			<a href="resources.html">Resources</a>
 			<a href="join.html">Join</a>
-			<a href="siteplan.html">Site Plan</a>
+			<a href="references.html">References</a>
 		</nav>
 	</header>
 
-	<main>
+	<main id="main">
 		<section class="hero">
 			<picture>
 				<source media="(max-width: 600px)"
@@ -65,6 +66,7 @@
 
 	<footer>
 		<p>&copy; <span id="currentyear"></span> GreenThumb Community</p>
+		<p><a href="references.html">References</a></p>
 		<p id="lastModified"></p>
 	</footer>
 </body>
